@@ -1,0 +1,1286 @@
+{
+	"info": {
+		"_postman_id": "e95aedd0-ca9c-482a-a5a7-b9b9e428c145",
+		"name": "Poliklinika",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37052609"
+	},
+	"item": [
+		{
+			"name": "Doctor",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/doctor/66c5256272f91513a2121b1d",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"doctor",
+								"66c5256272f91513a2121b1d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/doctor/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"doctor",
+								""
+							],
+							"query": [
+								{
+									"key": "birth_date[gt]",
+									"value": "2000-01-01",
+									"disabled": true
+								},
+								{
+									"key": "birth_date[lte]",
+									"value": "2002-01-01",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "Zufarov",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "Shokir",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "first_name,address,passport",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Ziyovuddin\",\r\n    \"last_name\": \"Karimov\",\r\n    \"birth_date\": \"2001-05-13\",\r\n    \"recruitment\": \"2022 yil 9 - martda ishga qabul qilindi\",\r\n    \"address\": \"Toshkent\",\r\n    \"passport\": \"AC9340243 JSHSHIR: 94592029430284\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/doctor/add",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"doctor",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"speciality\": [\"66cb8ee85088fb762ceff849\"],\r\n            \"_id\": \"66c5256272f91513a2121b1d\",\r\n            \"first_name\": \"Abdulla\",\r\n            \"last_name\": \"Zufarov\",\r\n            \"birth_date\": \"1999-08-28T00:00:00.000Z\",\r\n            \"recruitment\": \"2017 yil 18 - mayda ishga qabul qilindi\",\r\n            \"address\": \"Toshkent shahar\",\r\n            \"passport\": \"AC9974823 JSHSHIR: 34923135231276\",\r\n            \"schedule\": [\"66cb30c0062f38c5d5ca2812\", \"66cb315a062f38c5d5ca281d\", \"66cb319b062f38c5d5ca2824\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/doctor/update/66c5256272f91513a2121b1d",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"doctor",
+								"update",
+								"66c5256272f91513a2121b1d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/doctor/delete/66c447587680a0af8a07ea17",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"doctor",
+								"delete",
+								"66c447587680a0af8a07ea17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ALL",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/doctor/delete/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"doctor",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Visit",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/visit/66c59a079d5e6687af3486eb",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"visit",
+								"66c59a079d5e6687af3486eb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/visit/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"visit",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"diagnose_id\": [\"66d2042e6c9c2e65ecdf1a26\"],\r\n    \"visit_record\": \"Isitma tomoq og'rig'i burun bitishi xo'l yo'tal\",\r\n    \"card_number\": \"66c5256272f9151322121b1d\",\r\n    \"appointment_number\": [\"66d173e8d0378fd5d95c96a3\"],\r\n    \"code_complaint\": [\"66d822f2ee7b7b0e1ff701a5\"],\r\n    \"code_examination\": [\"66d8b82ca428e9d4f25c2a9f\", \"66d8b836a428e9d4f25c2aa1\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/visit/add",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"visit",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"diagnose_id\": [\"12372983s2131sd2\"],\r\n    \"visit_record\": \"Bosh og'rig'gi burun bitishi\",\r\n    \"card_number\": \"65c5256272f9151312121b1d\",\r\n    \"appointment_number\": \"64c5256274f9151322121b1d\",\r\n    \"code_complaint\": \"63c4256272f9151322121b1d\",\r\n    \"code_examination\": \"62c4256272f9151322121b1d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/visit/update/66c6ced37918e49c7fae6383",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"visit",
+								"update",
+								"66c6ced37918e49c7fae6383"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/visit/delete/66c6ced37918e49c7fae6383",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"visit",
+								"delete",
+								"66c6ced37918e49c7fae6383"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ALL",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/visit/delete/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"visit",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Schedule",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/schedule/66c82a7d72a6bb526497f5de",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"schedule",
+								"66c82a7d72a6bb526497f5de"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/schedule/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"schedule",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"appointment_day\": \"Seshanba\",\r\n    \"appointment_hour\": \"14:00-17:00\",\r\n    \"room_number\": 16\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/schedule/add",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"schedule",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"appointment_day\": \"Chorshanba\",\r\n    \"appointment_hour\": \"08:00-11:00\",\r\n    \"room_number\": 24\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/schedule/update/66c82a7d72a6bb526497f5de",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"schedule",
+								"update",
+								"66c82a7d72a6bb526497f5de"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/schedule/delete/66c82a7c72a6bb526497f5dc",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"schedule",
+								"delete",
+								"66c82a7c72a6bb526497f5dc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ALL",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/schedule/delete/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"schedule",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Speciality",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/speciality/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"speciality",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/speciality/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"speciality",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Physician\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/speciality/add",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"speciality",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/speciality/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"speciality",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/speciality/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"speciality",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ALL",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/speciality/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"speciality",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Area",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/area/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"area",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/area/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"area",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/area/add",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"area",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"population\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/area/update/66d17362d0378fd5d95c9687",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"area",
+								"update",
+								"66d17362d0378fd5d95c9687"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/area/delete/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"area",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ALL",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/area/delete/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"area",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Diagnose",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/diagnose/66d201b46d73459025ff4dc1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"diagnose",
+								"66d201b46d73459025ff4dc1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/diagnose/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"diagnose",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Faringit\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/diagnose/add",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"diagnose",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Follikulit\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/diagnose/update/66d201b46d73459025ff4dc1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"diagnose",
+								"update",
+								"66d201b46d73459025ff4dc1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/diagnose/delete/66d201b46d73459025ff4dc1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"diagnose",
+								"delete",
+								"66d201b46d73459025ff4dc1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ALL",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/diagnose/delete/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"diagnose",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/patient/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"patient",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/patient/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"patient",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Abdulla\",\r\n    \"last_name\": \"Zufarov\",\r\n    \"birth_date\": \"1999-08-05\",\r\n    \"address\": \"Toshkent shahar\",\r\n    \"phone\": \"+99894 611 81 12\",\r\n    \"passport\": \"AA5692312\",\r\n    \"area_id\": \"66d18ad57acaa36d6f54804c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/patient/add",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"patient",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Doniyor\",\r\n    \"last_name\": \"Tohirov\",\r\n    \"birth_date\": \"2001-12-29\",\r\n    \"address\": \"Farg'ona shahar\",\r\n    \"phone\": \"+99893 923 12 13\",\r\n    \"passport\": \"AB3412321\",\r\n    \"area_id\": \"66d18ad57acaa36d6f54804c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/patient/update/66dcabae1631fe10a5b05565",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"patient",
+								"update",
+								"66dcabae1631fe10a5b05565"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/patient/delete/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"patient",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ALL",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/patient/delete/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"patient",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Nurse",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/nurse/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"nurse",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/nurse/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"nurse",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Mirziyod\",\r\n    \"last_name\": \"Tohirov\",\r\n    \"birth_date\": \"2001-12-12\",\r\n    \"address\": \"Toshkent shahar\",\r\n    \"phone\": \"998959314312\",\r\n    \"passport\": \"AA3492312\",\r\n    \"date_of_recruitment\": \"2019-yil 19-martda ishga qabul qilindi\",\r\n    \"schedule_id\": [\"66cb3107062f38c5d5ca2814\", \"66cb315a062f38c5d5ca281d\"],\r\n    \"speciality_id\": \"66cb8f7d5088fb762ceff856\",\r\n    \"area_id\": \"66d18ad57acaa36d6f54804c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/nurse/add/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"nurse",
+								"add",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Abdulla\",\r\n    \"last_name\": \"Zufarov\",\r\n    \"birth_date\": \"1999-05-08\",\r\n    \"address\": \"Toshkent shahar\",\r\n    \"phone\": \"998915860321\",\r\n    \"passport\": \"AB9786543\",\r\n    \"date_of_recruitment\": \"2015-yil 1-yanvarda ishga qabul qilindi\",\r\n    \"schedule_id\": [\"66cb30c0062f38c5d5ca2812\", \"66cb3150062f38c5d5ca281b\", \"66cb319b062f38c5d5ca2824\"],\r\n    \"speciality_id\": \"66cb8ee85088fb762ceff849\",\r\n    \"area_id\": \"66d18ad57acaa36d6f54804c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/nurse/update/66dea54e7bc08d023203cb99",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"nurse",
+								"update",
+								"66dea54e7bc08d023203cb99"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/nurse/delete/66dea54e7bc08d023203cb99",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"nurse",
+								"delete",
+								"66dea54e7bc08d023203cb99"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ALL",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/nurse/delete",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"nurse",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Registration Nurse",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/registration_nurse/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"registration_nurse",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/registration_nurse/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"registration_nurse",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Diyora\",\r\n    \"last_name\": \"Egamberdiyeva\",\r\n    \"birth_date\": \"1998-11-11\",\r\n    \"address\": \"Toshkent shahar\",\r\n    \"phone\": \"998940231232\",\r\n    \"passport\": \"AB3042312\",\r\n    \"date_of_recruitment\": \"2018-yil 9-aprelda ishga qabul qilindi\",\r\n    \"schedule_id\": [\"\", \"\"],\r\n    \"speciality_id\": \"66e05a581ad7edf72c54260d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/registration_nurse/add",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"registration_nurse",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Ra'no\",\r\n    \"last_name\": \"Tolipova\",\r\n    \"birth_date\": \"2002-08-06\",\r\n    \"address\": \"Toshkent shahar\",\r\n    \"phone\": \"998909098765\",\r\n    \"passport\": \"AA3452313\",\r\n    \"date_of_recruitment\": \"2017-yil 29-avgustda ishga qabul qilindi\",\r\n    \"schedule_id\": [\"66cb30c0062f38c5d5ca2812\", \"66cb319b062f38c5d5ca2824\"],\r\n    \"speciality_id\": \"66e05a581ad7edf72c54260d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/registration_nurse/update/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"registration_nurse",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/registration_nurse/delete/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"registration_nurse",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ALL",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/registration_nurse/delete",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"registration_nurse",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test uchun",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/null",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"null"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:3000/api/v1",
+			"type": "string"
+		}
+	]
+}
