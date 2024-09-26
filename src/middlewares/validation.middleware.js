@@ -1,7 +1,7 @@
 const ValidationMiddleware = (schema) => {
     return (req, res, next) => {
         const { error, value } = schema.validate(req.body);
-
+        // console.log(error, value)
         if(error){
             return res.status(400).send({
                 name: "Validation error",
